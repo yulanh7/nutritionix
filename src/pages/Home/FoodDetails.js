@@ -9,7 +9,7 @@ let data = [];
 if (_.has(nutritionix, 'data_points')) {
   data = nutritionix.data_points[0].intake_list;
 }
-
+console.warn('length', data.length);
 const FoodDetails = () => (
   <div>
     {data.length !== 0 ? (
@@ -19,7 +19,7 @@ const FoodDetails = () => (
         renderItem={item => (
           <List.Item>
             <List.Item.Meta
-              avatar={<Avatar src={item.photo.thumb} />}
+              avatar={item.photo?<Avatar src={item.photo.thumb} />:null}
               title={
                 <Row>
                   <Col sm={12} styls={{ float: 'left' }}>

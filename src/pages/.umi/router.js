@@ -3,7 +3,7 @@ import { Router as DefaultRouter, Route, Switch } from 'react-router-dom';
 import dynamic from 'umi/dynamic';
 import renderRoutes from 'umi/lib/renderRoutes';
 import history from '@tmp/history';
-import RendererWrapper0 from '/Users/yulanhuang/Project/自己的/nutritionix/src/pages/.umi/LocaleWrapper.jsx';
+import RendererWrapper0 from '/Users/yulanhuang/Project/myProject/nutritionix-app/nutritionix/src/pages/.umi/LocaleWrapper.jsx';
 import _dvaDynamic from 'dva/dynamic';
 
 const Router = require('dva/router').routerRedux.ConnectedRouter;
@@ -19,7 +19,7 @@ const routes = [
           ? _dvaDynamic({
               component: () =>
                 import(/* webpackChunkName: "p__Home__Home" */ '../Home/Home'),
-              LoadingComponent: require('/Users/yulanhuang/Project/自己的/nutritionix/src/components/PageLoading/index')
+              LoadingComponent: require('/Users/yulanhuang/Project/myProject/nutritionix-app/nutritionix/src/components/PageLoading/index')
                 .default,
             })
           : require('../Home/Home').default,
@@ -28,7 +28,7 @@ const routes = [
       {
         component: () =>
           React.createElement(
-            require('/Users/yulanhuang/Project/自己的/nutritionix/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
+            require('/Users/yulanhuang/Project/myProject/nutritionix-app/nutritionix/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
               .default,
             { pagesPath: 'src/pages', hasRoutesInConfig: true },
           ),
@@ -38,7 +38,7 @@ const routes = [
   {
     component: () =>
       React.createElement(
-        require('/Users/yulanhuang/Project/自己的/nutritionix/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
+        require('/Users/yulanhuang/Project/myProject/nutritionix-app/nutritionix/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
           .default,
         { pagesPath: 'src/pages', hasRoutesInConfig: true },
       ),

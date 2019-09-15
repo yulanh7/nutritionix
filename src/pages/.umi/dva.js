@@ -20,14 +20,14 @@ export function _onCreate() {
     app.use(plugin);
   });
   
-  app.model({ namespace: 'global', ...(require('/Users/yulanhuang/Project/自己的/nutritionix/src/models/global.js').default) });
-app.model({ namespace: 'list', ...(require('/Users/yulanhuang/Project/自己的/nutritionix/src/models/list.js').default) });
-app.model({ namespace: 'login', ...(require('/Users/yulanhuang/Project/自己的/nutritionix/src/models/login.js').default) });
-app.model({ namespace: 'menu', ...(require('/Users/yulanhuang/Project/自己的/nutritionix/src/models/menu.js').default) });
-app.model({ namespace: 'nutritionix', ...(require('/Users/yulanhuang/Project/自己的/nutritionix/src/models/nutritionix.js').default) });
-app.model({ namespace: 'project', ...(require('/Users/yulanhuang/Project/自己的/nutritionix/src/models/project.js').default) });
-app.model({ namespace: 'setting', ...(require('/Users/yulanhuang/Project/自己的/nutritionix/src/models/setting.js').default) });
-app.model({ namespace: 'user', ...(require('/Users/yulanhuang/Project/自己的/nutritionix/src/models/user.js').default) });
+  app.model({ namespace: 'global', ...(require('/Users/yulanhuang/Project/myProject/nutritionix-app/nutritionix/src/models/global.js').default) });
+app.model({ namespace: 'list', ...(require('/Users/yulanhuang/Project/myProject/nutritionix-app/nutritionix/src/models/list.js').default) });
+app.model({ namespace: 'login', ...(require('/Users/yulanhuang/Project/myProject/nutritionix-app/nutritionix/src/models/login.js').default) });
+app.model({ namespace: 'menu', ...(require('/Users/yulanhuang/Project/myProject/nutritionix-app/nutritionix/src/models/menu.js').default) });
+app.model({ namespace: 'nutritionix', ...(require('/Users/yulanhuang/Project/myProject/nutritionix-app/nutritionix/src/models/nutritionix.js').default) });
+app.model({ namespace: 'project', ...(require('/Users/yulanhuang/Project/myProject/nutritionix-app/nutritionix/src/models/project.js').default) });
+app.model({ namespace: 'setting', ...(require('/Users/yulanhuang/Project/myProject/nutritionix-app/nutritionix/src/models/setting.js').default) });
+app.model({ namespace: 'user', ...(require('/Users/yulanhuang/Project/myProject/nutritionix-app/nutritionix/src/models/user.js').default) });
   return app;
 }
 
