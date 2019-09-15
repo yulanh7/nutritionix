@@ -110,6 +110,7 @@ class searchFood extends Component {
           'photo',
         ]);
         const nutritionix = getLSVal('nutritionix');
+        console.warn('intake_items', intake_items);
 
         if (_.has(nutritionix, 'data_points')) {
           let intake_list = nutritionix.data_points[0].intake_list;
@@ -146,6 +147,8 @@ class searchFood extends Component {
         this.setState({
           modalVisible: false,
         });
+        window.location.reload(); 
+
       } else {
         console.log(err);
       }
