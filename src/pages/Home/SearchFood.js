@@ -147,8 +147,6 @@ class searchFood extends Component {
         this.setState({
           modalVisible: false,
         });
-        window.location.reload(); 
-
       } else {
         console.log(err);
       }
@@ -292,10 +290,10 @@ class searchFood extends Component {
                           rules: [{ required: true }],
                         })(
                           <Select>
-                            <Option value="snack">Snack</Option>
+                            <Option value="Snack">Snack</Option>
                             <Option value="Breakfast">Breakfast</Option>
-                            <Option value="lunch">Lunch</Option>
-                            <Option value="dinner">Dinner</Option>
+                            <Option value="Lunch">Lunch</Option>
+                            <Option value="Dinner">Dinner</Option>
                           </Select>
                         )}
                       </Form.Item>
