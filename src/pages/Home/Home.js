@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'dva';
 import { Card, Input, Row, Col, Select, Popover } from 'antd';
+import { getLSVal } from '@/utils/utils';
 import SearchFood from './SearchFood';
 import FoodDetails from './FoodDetails';
 import PersonalInfo from './PersonalInfo';
@@ -17,15 +18,22 @@ class Home extends Component {
     this.state = {
       // clicked: false,
       // clickContent: null,
+      dailyCalories: 0,
     };
   }
 
   componentDidMount = () => {
-    // const { dispatch } = this.props;
-    // dispatch({
-    //   type: 'nutritionix/fetchNutrients',
-    //   payload: []
-    // })
+    const { dailyCalories } = this.state;
+    let calories = 0;
+    const nutritionix = getLSVal('nutritionix');
+    if (_.has(nutritionix, 'data_points')) {
+      const data = nutritionix.data_points[0].intake_list;
+      data.map(item => {
+        calories += Number(item.nf_calories);
+        return calories;
+      });
+    }
+
   };
 
   render() {

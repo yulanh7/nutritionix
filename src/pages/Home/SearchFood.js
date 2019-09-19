@@ -21,7 +21,16 @@ class searchFood extends Component {
       modalData: {},
       modalVisible: false,
       isCommon: true,
+      dailyFoodData: [],
     };
+  }
+
+  componentDidMount = () => {
+    const nutritionix = getLSVal('nutritionix');
+    this.setState({
+      dailyFoodData: {}
+    })
+
   }
 
   onSearch = (value, event) => {
@@ -110,6 +119,7 @@ class searchFood extends Component {
           'photo',
         ]);
         const nutritionix = getLSVal('nutritionix');
+  
         console.warn('intake_items', intake_items);
 
         if (_.has(nutritionix, 'data_points')) {
@@ -124,6 +134,9 @@ class searchFood extends Component {
               },
             ],
           };
+          this.setState({
+            dailyFoodData:diet
+          })
           localStorage.setItem('nutritionix', JSON.stringify(diet));
         } else {
           let intake_list = [];
@@ -174,7 +187,8 @@ class searchFood extends Component {
   };
 
   render() {
-    const { modalData = {}, dropdownVisible, modalVisible, isCommon } = this.state;
+    const { modalData = {}, dropdownVisible, modalVisible, isCommon, dailyFoodData} = this.state;
+    console.log('dailyFoods', dailyFoodData);
     const {
       form: { getFieldDecorator },
       nutrientList: {

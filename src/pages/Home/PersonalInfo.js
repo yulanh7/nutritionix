@@ -59,7 +59,7 @@ class PersonalInfo extends Component {
             <Col xs={8}>
               <div className={styles.Oval}>
                 <div className={styles.Headline6}>163</div>
-                <div className={styles.caption}>kg</div>
+                <div className={styles.caption}>cm</div>
               </div>
             </Col>
           </Row>
@@ -68,7 +68,7 @@ class PersonalInfo extends Component {
         <div className={styles.downContent}>
           <Row style={{ marginBottom: '20px' }}>
             <Col xs={12} className={styles.left}>
-              <div className={styles.Headline5}>{calories} Cal</div>
+              <div className={styles.Headline5}>{calories.toFixed(2)} Cal</div>
               <div className={styles.caption}>consumed</div>
             </Col>
             <Col xs={12} className={styles.right}>
@@ -91,19 +91,19 @@ class PersonalInfo extends Component {
           <Row>
             <Col sm={6}>
               <div className={styles.Headline6}>{breakfastCalories}</div>
-              <div className={styles.caption}>Cal</div>
+              <div className={styles.caption}>Breakfast</div>
             </Col>
             <Col sm={6}>
               <div className={styles.Headline6}>{lunchCalories}</div>
-              <div className={styles.caption}>Cal</div>
+              <div className={styles.caption}>Lunch</div>
             </Col>
             <Col sm={6}>
               <div className={styles.Headline6}>{dinnerCalories}</div>
-              <div className={styles.caption}>Cal</div>
+              <div className={styles.caption}>Dinner</div>
             </Col>
             <Col sm={6}>
               <div className={styles.Headline6}>{snackCalories}</div>
-              <div className={styles.caption}>Cal</div>
+              <div className={styles.caption}>Snack</div>
             </Col>
           </Row>
         </div>
